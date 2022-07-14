@@ -19,7 +19,23 @@
     }
 }
 
+@{
+    char newChar = 'a';
+    string newString = "nel mezzo del cammin di nostra vita";
+    int charCount(char c, string s)
+    {
+        int n = 0;
+        for (int i = 0; i < s.Length; i++)
+        {
+            if (c == s[i])
+                n++;
+        }
+        return n;
+    }
+}
+
 <div class="text-center">
     <h2 class="display-4">@name @surname</h2>
     <span>@sum(4)</span>
+    <div>La lettera "@newChar" è presente nella frase "@newString" @charCount(newChar, newString) volte</div>
 </div>

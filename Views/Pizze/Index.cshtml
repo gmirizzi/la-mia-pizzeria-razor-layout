@@ -1,0 +1,24 @@
+﻿@{
+	ViewData["Title"] = "Pizze";
+}
+
+<div class="text-center">
+	<h1 class="display-4">Pizze</h1>
+	<div class="container">
+		<div class="row row-cols-3">
+			@for (int i = 0; i < 6; i++)
+			{
+				<div class="col">
+					<div class="card">
+						<div class="card-body">
+							<h5 class="card-title">Nome Pizza</h5>
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						</div>
+						<img src="https://picsum.photos/200" class="card-img-top" alt="pizza">
+						<div class="card-text">3.99$</div>
+					</div>
+				</div>
+			}
+		</div>
+	</div>
+</div>

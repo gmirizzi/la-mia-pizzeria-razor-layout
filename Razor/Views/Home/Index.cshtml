@@ -8,9 +8,18 @@
 }
 
 @{
-
+    int sum(int n)
+    {
+        int sum = 0;
+        for (int i = 1; i <= n; i++)
+        {
+            sum += i;
+        }
+        return sum;
+    }
 }
 
 <div class="text-center">
     <h2 class="display-4">@name @surname</h2>
+    <span>@sum(4)</span>
 </div>

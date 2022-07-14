@@ -47,6 +47,7 @@
     <span>@sum(4)</span>
     <div>La lettera "@newChar" è presente nella frase "@newString" @charCount(newChar, newString) volte.</div>
     <div class="text-start">
+
         Numeri:
     <ol>
         @foreach (int num in numberList)
@@ -57,11 +58,15 @@
         }
     </ol>
     </div>
-    <div>@DateTime.Now.ToString("yyyy-MM-d HH:m:s")</div>
+    <div>
+        <h3>Esercizio 5</h3>
+        @DateTime.Now.ToString("yyyy-MM-d HH:m:s")</div>
     <div>
         <h3>Esercizio 6</h3>
-        <ol type="a">
+        <ol type="a" class="text-start">
             <li>@DateTime.Now.AddDays(-7).ToShortDateString()</li>
+            <li>@DateTime.Now.ToString("dddd")</li>
+            <li>@DateTime.Now.AddYears(1).ToString("dddd")</li>
         </ol>
     </div>
 </div>

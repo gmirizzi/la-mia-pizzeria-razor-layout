@@ -34,8 +34,27 @@
     }
 }
 
+@{
+    List<int> numberList = new List<int>(20);
+    for (int i = 0; i < numberList.Capacity; i++)
+    {
+        numberList.Add(new Random().Next(1, 91));
+    }
+}
+
 <div class="text-center">
     <h2 class="display-4">@name @surname</h2>
     <span>@sum(4)</span>
-    <div>La lettera "@newChar" è presente nella frase "@newString" @charCount(newChar, newString) volte</div>
+    <div>La lettera "@newChar" è presente nella frase "@newString" @charCount(newChar, newString) volte.</div>
+    <div class="text-start">
+        Numeri:
+    <ol>
+        @foreach (int num in numberList)
+        {
+            if (num >= 20 && num <= 70) {
+                <li>@num</li>
+            }
+        }
+    </ol>
+    </div>
 </div>
